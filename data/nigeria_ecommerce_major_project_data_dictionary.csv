@@ -1,0 +1,32 @@
+column_name,data_type,description,ML_guidance
+order_id,integer,Unique order identifier,Identifier; do not use as predictive signal
+customer_id,integer,Customer identifier,Identifier; use only for grouped/time analyses unless carefully engineered
+order_timestamp,datetime,Order timestamp,Use for time features and chronological analysis
+order_date,date,Calendar order date,Useful for aggregation
+city,categorical,Customer delivery city,Pre-order feature
+customer_type,categorical,New/Returning/VIP,Pre-order feature
+customer_tenure_days,integer,Days since customer acquisition,Pre-order feature
+previous_orders,integer,Historical order count,Pre-order feature
+prior_cancellations,integer,Historical cancellation count,Pre-order feature
+email_verified,boolean,Whether email was verified,Pre-order feature
+traffic_source,categorical,Acquisition/traffic channel,Pre-order feature
+device_type,categorical,Checkout device,Pre-order feature
+session_duration_minutes,numeric,Session duration before order,Pre-order feature
+pages_viewed,integer,Pages viewed before order,Pre-order feature
+cart_items,integer,Items in cart before checkout,Pre-order feature
+product,categorical,Purchased product,Pre-order feature
+category,categorical,Product category,Pre-order feature
+quantity,integer,Units ordered,Regression target candidate
+unit_price,numeric,Price per unit at order time,Pre-order feature
+discount_percent,numeric,Discount applied,Pre-order feature
+coupon_code,categorical,Coupon used,Pre-order feature
+shipping_fee,numeric,Shipping charge,Pre-order feature
+delivery_distance_km,numeric,Estimated delivery distance,Pre-order feature
+estimated_delivery_days,integer,Pre-order delivery estimate,Pre-order feature
+payment_method,categorical,Chosen payment method,Pre-order feature
+gross_amount,numeric,unit_price × quantity,Derived; leakage for quantity model
+discount_amount,numeric,Discount monetary value,Derived; inspect for leakage
+total_amount,numeric,Final order amount,Derived; leakage risk depending on target
+order_status,categorical,Delivered/Cancelled/Refunded,Classification target
+actual_delivery_days,numeric,Observed delivery duration,Post-outcome; never use for pre-order cancellation prediction
+customer_rating,numeric,Post-delivery rating,Post-outcome; never use for pre-order cancellation prediction
