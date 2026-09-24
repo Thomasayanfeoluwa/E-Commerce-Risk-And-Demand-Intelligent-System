@@ -1,0 +1,40 @@
+[{"stream_name":"stderr","time":8.162151975,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.162247087,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.162259077,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.162262365,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.876734174,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.876807363,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.876814849,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.876819886,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":15.492535688,"data":"Note: you may need to restart the kernel to use updated packages.\n"}
+,{"stream_name":"stdout","time":21.234039386,"data":"🚀 System active. Current Device: CUDA\n"}
+,{"stream_name":"stdout","time":21.234062685,"data":"📊 Total available GPUs detected: 2\n"}
+,{"stream_name":"stdout","time":21.234066687,"data":"💡 Pro-Tip: You are running dual T4 GPUs. Use torch.nn.DataParallel() to maximize VRAM!\n"}
+,{"stream_name":"stderr","time":24.418861841000002,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":24.418893623,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":24.418913473,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":24.42086913,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":24.420886551,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":24.420892584,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":24.420897936,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":24.420903092,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":24.420908305,"data":"Exception encountered at \"In [2]\":\n"}
+,{"stream_name":"stderr","time":24.42091362,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":24.420918425,"data":"NameError                                 Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":24.420930441,"data":"/tmp/ipykernel_23/3018944282.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":24.420935725,"data":"      1 output_dir = \"/kaggle/working/trained_model\"\n"}
+,{"stream_name":"stderr","time":24.420940815,"data":"      2 \n"}
+,{"stream_name":"stderr","time":24.420946099,"data":"----\u003e 3 model.save_pretrained(output_dir)\n"}
+,{"stream_name":"stderr","time":24.420951121,"data":"      4 tokenizer.save_pretrained(output_dir)\n"}
+,{"stream_name":"stderr","time":24.420956553,"data":"\n"}
+,{"stream_name":"stderr","time":24.420961401,"data":"NameError: name 'model' is not defined\n"}
+,{"stream_name":"stderr","time":24.420966818,"data":"\n"}
+,{"stream_name":"stderr","time":26.548109305,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":26.548158443,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":26.71151306,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":26.711536892,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":27.324781984,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":27.611865989,"data":"[NbConvertApp] Writing 6112 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":29.900650503,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":30.681006198,"data":"[NbConvertApp] Writing 280820 bytes to __results__.html\n"}
+]
