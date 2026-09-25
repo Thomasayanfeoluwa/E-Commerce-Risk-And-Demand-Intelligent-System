@@ -1,7 +1,7 @@
 {
   "id": "thomasadegoke/e-commerce-risk-and-demand-intelligent-system",
   "title": "E-Commerce Risk and Demand Intelligent System",
-  "code_file": "research.ipynb",
+  "code_file": "01_data_understanding.ipynb",
   "language": "python",
   "kernel_type": "notebook",
   "is_private": "true",
