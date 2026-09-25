@@ -11,3 +11,6 @@ city	Yes	Yes	Assuming shipping location is known
 payment_method	Yes	Yes	Assuming selected at checkout
 order_status	No	Target	This is what we're trying to predict
 total_amount	?	?	Must investigate how it is generated
+
+
+
