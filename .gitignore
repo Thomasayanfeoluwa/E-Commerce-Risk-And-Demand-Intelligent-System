@@ -1,0 +1,43 @@
+.kaggle-env/
+.kaggle-outputs/
+kaggle-outputs/
+
+# Kaggle upload copies and execution logs
+kaggle_dataset/*.csv
+*.log
+
+# Local datasets and generated model data
+data/*.csv
+!data/nigeria_ecommerce_major_project_data_dictionary.csv
+models/
+artifacts/
+outputs/
+*.joblib
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.safetensors
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
