@@ -8,7 +8,7 @@ kaggle_dataset/*.csv
 
 # Local datasets and generated model data
 data/*.csv
-!data/nigeria_ecommerce_major_project_data_dictionary.csv
+!data/nigeria_ecommerce_25000.csv
 models/
 artifacts/
 outputs/
