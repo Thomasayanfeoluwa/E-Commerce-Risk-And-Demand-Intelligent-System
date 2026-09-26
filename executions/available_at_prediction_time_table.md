@@ -72,18 +72,18 @@ The prediction would be used by the **e-commerce operations or customer-support 
 
 
 
-Step 1 — Freeze the formulation
+### Step 1 — Freeze the formulation
 
 Already done:
 
-Model B
+#### Model B
 
 Unit: Product × Week
 Horizon: 1 week ahead
 Target: all requested quantity
 Chronological evaluation
 No future information in features
-Step 2 — Establish the real baseline
+### Step 2 — Establish the real baseline
 
 This comes before ML.
 
@@ -94,7 +94,7 @@ Naive-1: last week's demand
 
 The forecast must advance through time rather than using one fixed prediction for an entire validation period.
 
-Step 3 — Freeze validation
+### Step 3 — Freeze validation
 
 We choose the chronological training/validation/test periods before looking at test performance.
 
@@ -107,7 +107,7 @@ feature choices
 
 The test set stays untouched until everything is frozen.
 
-Step 4 — Train the candidate ML models
+### Step 4 — Train the candidate ML models
 
 Then we test the agreed regression methods, such as:
 
@@ -120,7 +120,7 @@ Random Forest
 
 We don't assume any of them is superior.
 
-Step 5 — Compare ML against the baselines
+### Step 5 — Compare ML against the baselines
 
 This is the critical decision point.
 
@@ -131,13 +131,13 @@ ML clearly beats 4-week MA	Evidence of incremental predictive value
 ML slightly beats it	Potential value, but we examine whether improvement is practically meaningful
 ML ≈ baseline	Simpler forecasting method may be sufficient
 ML loses	We report that honestly; Model B remains a valid forecasting investigation but ML did not add value
-Step 6 — Final untouched test
+### Step 6 — Final untouched test
 
 Only after selecting the approach using validation do we evaluate once on the latest future period.
 
 That gives us the strongest evidence we can obtain from this dataset.
 
-One important correction to our thinking
+#### One important correction to our thinking
 
 We should not ask “Will Model B be useful?” as though that can be known from EDA alone.
 
