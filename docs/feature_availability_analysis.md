@@ -41,6 +41,64 @@ A documented business rule or source-data definition linking refunds to cancella
 The prediction would be used by the **e-commerce operations or customer-support team**. A high predicted cancellation probability would flag an order for appropriate review or an established customer/order verification workflow. The model would provide a **risk probability**, not automatically cancel an order. The operational action and risk threshold would be determined separately based on business rules and the relative costs of incorrect decisions.
 
 
+Model A — final candidate feature set
+
+These are all intended to be information available at order creation:
+
+Customer/history
+
+customer_type
+customer_tenure_days
+previous_orders
+prior_cancellations
+email_verified
+
+Session / behavior
+
+traffic_source
+device_type
+session_duration_minutes
+pages_viewed
+cart_items
+
+Order/product
+
+product
+category
+quantity
+unit_price
+discount_percent
+coupon_code
+shipping_fee
+delivery_distance_km
+estimated_delivery_days
+payment_method
+
+Time-derived
+
+order_month
+day_of_week
+is_weekend
+order_hour
+
+That gives us 24 candidate features.
+
+What we explicitly exclude
+order_id
+customer_id
+order_status
+actual_delivery_days
+customer_rating
+total_amount
+gross_amount
+discount_amount
+
+Reasons are important:
+
+order_id and raw customer_id: identifiers, not direct predictive information.
+order_status: the target itself.
+actual_delivery_days, customer_rating: known after the outcome.
+total_amount, gross_amount, discount_amount: mathematically derived monetary fields that are redundant with the order components; excluding them keeps the first model clean and avoids unnecessary duplication.
 
 
 
