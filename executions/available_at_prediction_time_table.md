@@ -56,22 +56,6 @@ The prediction would be used by the **e-commerce operations or customer-support 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Step 1 — Freeze the formulation
 
 Already done:
