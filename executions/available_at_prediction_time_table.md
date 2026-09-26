@@ -39,3 +39,116 @@ A documented business rule or source-data definition linking refunds to cancella
 ### 4. Who would use the prediction, and what might they do when the risk is high?
 
 The prediction would be used by the **e-commerce operations or customer-support team**. A high predicted cancellation probability would flag an order for appropriate review or an established customer/order verification workflow. The model would provide a **risk probability**, not automatically cancel an order. The operational action and risk threshold would be determined separately based on business rules and the relative costs of incorrect decisions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Step 1 — Freeze the formulation
+
+Already done:
+
+Model B
+
+Unit: Product × Week
+Horizon: 1 week ahead
+Target: all requested quantity
+Chronological evaluation
+No future information in features
+Step 2 — Establish the real baseline
+
+This comes before ML.
+
+We should implement proper rolling one-week-ahead evaluation for:
+
+Naive-1: last week's demand
+4-week moving average
+
+The forecast must advance through time rather than using one fixed prediction for an entire validation period.
+
+Step 3 — Freeze validation
+
+We choose the chronological training/validation/test periods before looking at test performance.
+
+Validation is where we decide:
+
+preprocessing
+model
+hyperparameters
+feature choices
+
+The test set stays untouched until everything is frozen.
+
+Step 4 — Train the candidate ML models
+
+Then we test the agreed regression methods, such as:
+
+Linear Regression
+Lasso
+Ridge
+KNN Regressor
+Decision Tree
+Random Forest
+
+We don't assume any of them is superior.
+
+Step 5 — Compare ML against the baselines
+
+This is the critical decision point.
+
+For example:
+
+Result	Interpretation
+ML clearly beats 4-week MA	Evidence of incremental predictive value
+ML slightly beats it	Potential value, but we examine whether improvement is practically meaningful
+ML ≈ baseline	Simpler forecasting method may be sufficient
+ML loses	We report that honestly; Model B remains a valid forecasting investigation but ML did not add value
+Step 6 — Final untouched test
+
+Only after selecting the approach using validation do we evaluate once on the latest future period.
+
+That gives us the strongest evidence we can obtain from this dataset.
+
+One important correction to our thinking
+
+We should not ask “Will Model B be useful?” as though that can be known from EDA alone.
+
+There are actually two separate questions:
+
+1. Is the business problem sensible?
+Yes.
+
+2. Does this dataset contain enough predictable information for ML to outperform reasonable forecasting methods?
+Unknown until we run the controlled experiment.
+
+That distinction is exactly what will keep this project technically credible.
+
+So from here, I recommend no more feature engineering yet. The next thing should be the proper rolling baseline evaluation, because that establishes the hurdle every ML model must beat.
